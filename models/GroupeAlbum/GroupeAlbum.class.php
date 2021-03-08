@@ -1,9 +1,6 @@
 <?php 
 
 
-require_once 'models/connexion.class.php';
-
-
 class GroupeAlbum {
 
     private $id;

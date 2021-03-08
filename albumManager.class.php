@@ -1,7 +1,6 @@
 <?php
 
 require_once 'models/connexion.class.php';
-
 require_once 'album.class.php';
 
 
@@ -37,27 +36,5 @@ class AlbumManager extends Connexion {
         }
 
     }
-
-
-
-    // public function chargementAlbumGroupeBDD() {
-
-    //     $req = $this->getBDD()->prepare("SELECT groupe.id, groupe.nom, groupe.description, groupe.anneeCreation, groupe.image, album.nom_album, album.date
-    //     FROM groupe 
-    //     INNER JOIN album
-    //     ON groupe.id = album.id_groupe");
-
-    //     $req->execute();
-
-    //     $groupesAlbums = $req->fetchAll(PDO::FETCH_ASSOC);
-
-    //     foreach ($groupesAlbums as $groupeAlbum) {
-
-           
-    //     }
-    // }
-
-
-
 
 }

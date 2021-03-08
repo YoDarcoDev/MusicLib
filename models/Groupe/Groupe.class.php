@@ -1,7 +1,7 @@
 
 <?php 
 
-class Groupe extends Connexion {
+class Groupe {
 
     private $id;
     private $nom;

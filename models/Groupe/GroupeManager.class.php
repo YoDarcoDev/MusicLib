@@ -1,10 +1,10 @@
 <?php
 
 // CLASS CONNEXION 
-require_once 'models/connexion.class.php';
+require_once 'models/ConnexionBDD/connexion.class.php';
 
 // CLASS GROUPE car on utilise la classe dans chargementGroupesBDD()
-require_once 'groupe.class.php';
+require_once 'Groupe.class.php';
 
 
 class GroupeManager extends Connexion

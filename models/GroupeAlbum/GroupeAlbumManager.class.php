@@ -1,8 +1,9 @@
 
 <?php 
 
-require_once 'models/connexion.class.php';
+require_once 'models/ConnexionBDD/connexion.class.php';
 require_once 'GroupeAlbum.class.php';
+
 
 
 
@@ -42,4 +43,28 @@ class GroupeAlbumManager extends Connexion{
             $this->ajoutGroupeAlbum($grAlb);
         }
     }
+
+
+
+    public function countAlbumParGroupe() {
+
+        $req = $this->getBDD()->prepare("SELECT groupe.nom, COUNT(album.id_groupe) AS nombre
+                                         FROM groupe 
+                                         INNER JOIN album 
+                                         WHERE groupe.id = album.id_groupe 
+                                         GROUP BY album.id_groupe");
+        $req->execute();
+
+        $nombreAlbumGroupe = $req->fetchAll(PDO::FETCH_ASSOC);
+        $req->closeCursor();
+
+        // echo "<pre>";
+        // print_r($nombreAlbumGroupe);
+        // echo "</pre>";
+
+        
+
+    }
 }
+
+

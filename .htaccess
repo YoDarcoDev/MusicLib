@@ -1,0 +1,9 @@
+# REECRITURE URL
+RewriteEngine On
+
+# EVITE DE LISTER FICHIER ET DOSSIER
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+
+# REECRITURE DE TOUTES LES URLS
+RewriteRule ^(.*)$ index.php?page=$1
